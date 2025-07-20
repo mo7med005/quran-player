@@ -43,6 +43,9 @@ input[type="range"] {
   box-shadow: 0 0 50px black;
   margin: 50px auto;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .left {
@@ -70,3 +73,31 @@ input[type="range"] {
   box-sizing: border-box;
   margin-top: 100px;
 }
+
+@media (max-width: 768px) {
+  .center {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .right {
+    margin-top: 30px;
+  }
+
+  #img {
+    width: 100px;
+    height: 100px;
+  }
+
+  input[type="range"] {
+    width: 90% !important;
+  }
+}
+
